@@ -1,16 +1,80 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Icônes</title></head>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Générer icônes sport jaune</title>
+</head>
 <body style="font-family:sans-serif;background:#0b1220;color:#fff;text-align:center;padding:30px">
-<h2>🏎️ Icônes véhicule sportif</h2><p>icon-512.png puis icon-192.png se téléchargent. Uploadez-les via <b>Upload files</b>.</p>
-<canvas id="c" width="512" height="512" style="width:150px;border-radius:28px"></canvas>
+<h2>🏎️ Icônes véhicule sportif JAUNE</h2>
+<p>3 fichiers PNG vont se télécharger :<br>
+<b>icon-512.png</b>, <b>icon-192.png</b>, <b>icon-maskable-512.png</b></p>
+<p style="color:#fbbf24">⚠️ Uploadez-les sur GitHub via <b>« Upload files »</b> (jamais « Create new file »).<br>
+Vérifiez ensuite : https://VOTRE-URL/icon-192.png doit afficher l'image.</p>
+<canvas id="c" width="512" height="512" style="width:150px;border-radius:28px;margin:10px"></canvas>
 <script>
-function draw(s){var c=document.getElementById('c');c.width=s;c.height=s;var x=c.getContext('2d'),u=s/512;
-var g=x.createLinearGradient(0,0,0,s);g.addColorStop(0,'#7c3aed');g.addColorStop(1,'#0b1220');x.fillStyle=g;var r=100*u;x.beginPath();x.moveTo(r,0);x.lineTo(s,0);x.arcTo(s,s,s-r,s,r);x.lineTo(0,s);x.arcTo(0,s,0,s-r,r);x.lineTo(0,0);x.arcTo(0,0,r,0,r);x.closePath();x.fill();
-x.fillStyle='#f43f5e';x.beginPath();x.moveTo(60*u,340*u);x.lineTo(140*u,340*u);x.arc(190*u,340*u,50*u,Math.PI,0);x.lineTo(320*u,290*u);x.lineTo(420*u,290*u);x.arc(430*u,340*u,50*u,Math.PI,0);x.lineTo(460*u,340*u);x.quadraticCurveTo(470*u,300*u,430*u,270*u);x.quadraticCurveTo(360*u,200*u,250*u,200*u);x.quadraticCurveTo(150*u,200*u,100*u,270*u);x.quadraticCurveTo(55*u,300*u,60*u,340*u);x.closePath();x.fill();
-x.fillStyle='#bfe3ff';x.beginPath();x.moveTo(180*u,265*u);x.quadraticCurveTo(240*u,215*u,320*u,215*u);x.lineTo(340*u,265*u);x.closePath();x.fill();
-x.fillStyle='#0a0f1c';x.beginPath();x.arc(190*u,340*u,38*u,0,7);x.fill();x.beginPath();x.arc(430*u,340*u,38*u,0,7);x.fill();
-x.fillStyle='#22355c';x.beginPath();x.arc(190*u,340*u,20*u,0,7);x.fill();x.beginPath();x.arc(430*u,340*u,20*u,0,7);x.fill();
-x.fillStyle='#ffe08a';x.fillRect(440*u,280*u,25*u,8*u);x.fillStyle='#fff';x.font='bold '+(60*u)+'px Arial';x.textAlign='center';x.fillText('MRT',256*u,440*u);
-return c.toDataURL('image/png');}
-function dl(s,n){var a=document.createElement('a');a.href=draw(s);a.download=n;a.click();}
-setTimeout(function(){dl(512,'icon-512.png');setTimeout(function(){dl(192,'icon-192.png');},600);},400);
-</script></body></html>
+function drawCar(x){
+ /* carrosserie supercar JAUNE */
+ x.fillStyle='#facc15';
+ x.beginPath();
+ x.moveTo(30,350);x.lineTo(90,350);
+ x.arc(145,350,55,Math.PI,0);
+ x.lineTo(320,350);
+ x.arc(375,350,55,Math.PI,0);
+ x.lineTo(480,350);
+ x.quadraticCurveTo(495,345,492,318);
+ x.quadraticCurveTo(488,288,440,274);
+ x.lineTo(400,266);
+ x.quadraticCurveTo(340,203,250,199);
+ x.quadraticCurveTo(160,196,110,261);
+ x.lineTo(70,271);
+ x.quadraticCurveTo(30,284,26,318);
+ x.quadraticCurveTo(24,345,30,350);
+ x.closePath();x.fill();
+ /* aileron arrière */
+ x.fillStyle='#eab308';
+ x.beginPath();x.moveTo(425,248);x.lineTo(482,240);x.lineTo(485,252);x.lineTo(428,260);x.closePath();x.fill();
+ /* vitres */
+ x.fillStyle='#1e3a5f';
+ x.beginPath();x.moveTo(150,256);x.quadraticCurveTo(200,210,262,208);x.lineTo(300,256);x.closePath();x.fill();
+ /* phare AV + feu AR */
+ x.fillStyle='#fff7cc';x.fillRect(462,296,26,10);
+ x.fillStyle='#ef4444';x.fillRect(28,300,16,10);
+ /* roues */
+ function wheel(cx){
+  x.fillStyle='#0a0f1c';x.beginPath();x.arc(cx,350,48,0,7);x.fill();
+  x.fillStyle='#334155';x.beginPath();x.arc(cx,350,26,0,7);x.fill();
+  x.fillStyle='#0b1220';x.beginPath();x.arc(cx,350,10,0,7);x.fill();
+ }
+ wheel(145);wheel(375);
+ /* ligne de caisse */
+ x.strokeStyle='#0b1220';x.lineWidth=6;
+ x.beginPath();x.moveTo(60,318);x.lineTo(450,312);x.stroke();
+}
+function make(size,maskable){
+ var c=document.getElementById('c');c.width=size;c.height=size;
+ var x=c.getContext('2d');
+ x.setTransform(1,0,0,1,0,0);
+ x.scale(size/512,size/512);
+ /* fond */
+ if(maskable){ x.fillStyle='#0b1220'; x.fillRect(0,0,512,512); }
+ else{
+  var g=x.createLinearGradient(0,0,0,512);
+  g.addColorStop(0,'#1e293b');g.addColorStop(1,'#0b1220');
+  x.fillStyle=g;
+  var r=100;
+  x.beginPath();x.moveTo(r,0);x.lineTo(512,0);x.arcTo(512,512,512-r,512,r);x.lineTo(0,512);x.arcTo(0,512,0,512-r,r);x.lineTo(0,0);x.arcTo(0,0,r,0,r);x.closePath();x.fill();
+ }
+ /* zone sûre maskable : centrer + réduire */
+ if(maskable){ x.save(); x.translate(512*0.15,512*0.17); x.scale(0.70,0.70); drawCar(x); x.restore(); }
+ else{ drawCar(x); }
+ return c.toDataURL('image/png');
+}
+function dl(url,name){var a=document.createElement('a');a.href=url;a.download=name;a.click();}
+setTimeout(function(){
+ dl(make(512,false),'icon-512.png');
+ setTimeout(function(){ dl(make(192,false),'icon-192.png'); },500);
+ setTimeout(function(){ dl(make(512,true),'icon-maskable-512.png'); },1000);
+},300);
+</script>
+</body>
+</html>
