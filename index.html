@@ -26,7 +26,6 @@ button{font:inherit;color:var(--txt);background:var(--card2);border:1px solid #2
 button.primary{background:linear-gradient(135deg,#1d6fd1,#3aa0ff);border:none;font-weight:600}
 button.ai{background:linear-gradient(135deg,#7c3aed,#ec4899);border:none;font-weight:600}
 button.ghost{background:transparent}button.warn{background:linear-gradient(135deg,#b45309,#f59e0b);border:none;font-weight:600}
-a.chip{display:inline-block;text-decoration:none;padding:6px 12px;border-radius:99px;background:var(--card);border:1px solid #2c3e63;color:var(--mut);font-size:12px;margin:2px}
 input,select,textarea{font:inherit;color:var(--txt);background:#0e1830;border:1px solid #2c3e63;border-radius:10px;padding:9px;width:100%}
 .chips{display:flex;gap:8px;overflow-x:auto;padding:8px 0}.chip{white-space:nowrap;padding:7px 14px;border-radius:99px;background:var(--card);border:1px solid #2c3e63;color:var(--mut);cursor:pointer;font-size:13px}
 .chip.active{background:linear-gradient(135deg,#1d6fd1,#3aa0ff);color:#fff;font-weight:600}
@@ -40,7 +39,7 @@ input,select,textarea{font:inherit;color:var(--txt);background:#0e1830;border:1p
 .sheet{background:var(--card);border:1px solid #26375c;border-left:4px solid var(--acc);border-radius:10px;margin:8px 0;padding:10px 12px;cursor:pointer}
 .sheet div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:13px}
 .cat{font-size:10px;padding:2px 8px;border-radius:99px;font-weight:700}
-.c-Moteur{background:#7c3aed33;color:#c4b5fd}.c-Transmission{background:#0891b233;color:#67e8f9}.c-Électronique{background:#d9770633;color:#fcd34d}.c-Électrique{background:#05966933;color:#6ee7b7}.c-Airbag{background:#dc262633;color:#fca5a5}.c-Ceinture{background:#9333ea33;color:#d8b4fe}.c-ABS{background:#ea580c33;color:#fdba74}.c-ADAS{background:#0284c733;color:#7dd3fc}.c-Caméra{background:#4f46e533;color:#a5b4fc}.c-Freinage{background:#b91c1c33;color:#fecaca}.c-Dépollution{background:#65a30d33;color:#bef264}
+.c-Moteur{background:#7c3aed33;color:#c4b5fd}.c-Transmission{background:#0891b233;color:#67e8f9}.c-Électronique{background:#d9770633;color:#fcd34d}.c-Électrique{background:#05966933;color:#6ee7b7}.c-Airbag{background:#dc262633;color:#fca5a5}.c-Ceinture{background:#9333ea33;color:#d8b4fe}.c-ABS{background:#ea580c33;color:#fdba74}.c-ADAS{background:#0284c733;color:#7dd3fc}.c-Caméra{background:#4f46e533;color:#a5b4fc}.c-Freinage{background:#b91c1c33;color:#fecaca}.c-Dépollution{background:#65a30d33;color:#bef264}.c-Train{background:#0ea5e933;color:#7dd3fc}
 .src{float:right;font-size:10px;color:var(--mut)}.src.off{color:var(--acc2);font-weight:700}
 .modal{position:fixed;inset:0;z-index:50;background:rgba(4,8,18,.85);display:none;align-items:flex-end;justify-content:center}
 .modal.show{display:flex}.sheetModal{width:100%;max-width:900px;max-height:92vh;overflow:auto;background:var(--bg);border-radius:18px 18px 0 0;border-top:1px solid #2c3e63;padding:18px}
@@ -58,7 +57,7 @@ footer{margin-top:26px;text-align:center;color:var(--mut);font-size:11px;line-he
 <body>
 <div id="bg"><svg viewBox="0 0 1200 600" preserveAspectRatio="xMidYMax slice"><defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f43f5e"/><stop offset="1" stop-color="#13233f"/></linearGradient><linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bfe3ff"/><stop offset="1" stop-color="#4a7db5"/></linearGradient></defs><path fill="url(#g1)" d="M40,440 L120,440 A70,70 0 0 1 260,440 L840,440 A70,70 0 0 1 980,440 L1140,440 C1170,440 1185,420 1178,395 C1165,350 1105,318 1010,305 C930,215 800,170 640,168 C500,166 380,200 300,282 C190,292 100,332 62,382 C44,404 36,440 40,440 Z"/><path fill="url(#g2)" opacity=".85" d="M340,286 C410,220 510,196 630,194 L636,286 Z"/><path fill="url(#g2)" opacity=".85" d="M656,194 C760,199 840,235 900,290 L662,290 Z"/><rect x="1080" y="335" width="70" height="9" rx="4" fill="#ffe08a"/><rect x="55" y="356" width="50" height="8" rx="4" fill="#ff6b6b"/><g fill="#0a0f1c"><circle cx="190" cy="440" r="60"/><circle cx="910" cy="440" r="60"/></g><g fill="#22355c"><circle cx="190" cy="440" r="32"/><circle cx="910" cy="440" r="32"/></g><ellipse cx="600" cy="500" rx="540" ry="16" fill="#000" opacity=".35"/></svg></div>
 <div id="app">
-<header><div class="logo">🏎️</div><h1>Mon Aide Technique<small>by Kevin — DTC, rappels &amp; pannes connues</small></h1><div class="spacer"></div><span id="netBadge" class="badge">…</span><button id="btnUpdate" class="warn" title="Mise à jour hebdo">🔄</button><button id="btnInstall" style="display:none">⬇️</button><button id="btnShare" class="ghost">📤</button><button id="btnAdmin" class="ghost">🔐</button></header>
+<header><div class="logo">🏎️</div><h1>Mon Aide Technique<small>by Kevin — DTC, rappels &amp; pannes connues</small></h1><div class="spacer"></div><span id="netBadge" class="badge">…</span><button id="btnUpdate" class="warn" title="MàJ hebdo">🔄</button><button id="btnInstall" style="display:none">⬇️</button><button id="btnShare" class="ghost">📤</button><button id="btnAdmin" class="ghost">🔐</button></header>
 <div class="chips" id="groupChips"></div>
 <input id="globalSearch" placeholder="🤖 Code (P20EE), mot-clé (courroie, EGR, AdBlue) ou modèle (ID4, R5, 3008)…" style="margin-bottom:8px">
 <div id="suggestBox" class="drawer" style="display:none"></div>
@@ -75,8 +74,8 @@ footer{margin-top:26px;text-align:center;color:var(--mut);font-size:11px;line-he
 <div class="drawer" id="modelsDrawer" style="display:none"><h2><button class="back ghost" data-close="modelsDrawer">←</button> <span id="modelsTitle"></span></h2><input id="modelSearch" placeholder="Filtrer…"><div id="modelList"></div></div>
 <div class="drawer" id="enginesDrawer" style="display:none"><h2><button class="back ghost" data-close="enginesDrawer">←</button> <span id="enginesTitle"></span></h2><div class="chips" id="fuelChips"></div><div id="engineList"></div></div>
 <div class="drawer" id="sheetsDrawer" style="display:none"><h2><button class="back ghost" data-close="sheetsDrawer">←</button> <span id="sheetsTitle"></span></h2><div class="chips" id="catChips"></div>
-<div class="syncRow actions"><button id="syN">🇺🇸 NHTSA</button><button id="syT">📋 TSB</button><button id="syC">🇫🇷 Conso</button><button id="syS">🇪🇺 SafetyGate</button><button class="primary" id="syAll">⚡ Tout</button></div><div id="sheetList"></div></div>
-<footer>GitHub Pages • Sources : NHTSA · TSB · Rappel Conso · Safety Gate · L'Argus · Baidu<br>🔄 MàJ hebdo manuelle • 🔐 Accès admin + code tiers 30j • ⚠️ Confirmez avec le VIN<br>© Kevin — Mon Aide Technique</footer>
+<div class="actions"><button id="syN">🇺🇸 NHTSA</button><button id="syT">📋 TSB</button><button id="syC">🇫🇷 Conso</button><button id="syS">🇪🇺 SafetyGate</button><button class="primary" id="syAll">⚡ Tout</button></div><div id="sheetList"></div></div>
+<footer>GitHub Pages • NHTSA · TSB · Rappel Conso · Safety Gate · L'Argus · Baidu<br>🔄 MàJ hebdo manuelle • 🔐 Accès admin + code tiers 30j • ⚠️ Confirmez avec le VIN<br>© Kevin — Mon Aide Technique</footer>
 </div>
 <div class="modal" id="sheetModal"><div class="sheetModal"><div class="actions"><button class="ghost" data-closemodal="sheetModal">✕</button><span id="smCat" class="cat"></span><span id="smVeh" class="muted"></span></div><h3 id="smTitle"></h3>
 <div class="detail"><small>Symptômes</small><div id="smSym"></div></div><div class="detail"><small>DTC</small><div id="smDtc"></div></div><div class="detail"><small>Préconisation</small><div id="smFix"></div></div><div class="detail"><small>Source</small><div id="smSrc"></div></div>
@@ -84,53 +83,84 @@ footer{margin-top:26px;text-align:center;color:var(--mut);font-size:11px;line-he
 <div class="modal" id="adminModal"><div class="sheetModal"><div class="actions"><button class="ghost" data-closemodal="adminModal">✕</button><b>Administration</b></div>
 <div id="adminGate"><p class="muted">Mot de passe admin :</p><input type="password" id="adminPass" placeholder="••••••••"><div class="actions"><button class="primary" id="btnUnlock">Déverrouiller</button></div></div>
 <div id="adminPanel" style="display:none"><div class="adminTabs"><button class="chip active" data-tab="tStats">📊 Base</button><button class="chip" data-tab="tAccess">👥 Accès</button><button class="chip" data-tab="tCode">🎟️ Codes</button></div>
-<div class="adminSec show" id="tStats"><div id="statsBox"></div><div class="actions"><button class="warn" id="btnForceUpdate">🔄 MàJ hebdo maintenant</button><button id="btnReset">♻️ Régénérer</button></div></div>
+<div class="adminSec show" id="tStats"><div id="statsBox"></div><div class="actions"><button class="warn" id="btnForceUpdate">🔄 MàJ hebdo</button><button id="btnReset">♻️ Régénérer</button></div></div>
 <div class="adminSec" id="tAccess"><div id="accessBox"></div></div>
-<div class="adminSec" id="tCode"><p class="muted">Générez un code d'accès 30 jours pour un tiers :</p><div class="actions"><button class="primary" id="btnGenCode">🎟️ Générer code 30j</button></div><div id="codeOut" class="detail" style="display:none"></div><hr><p class="muted">Révoquer tous les codes (nouveau déploiement) : changez SECRET dans index.html.</p></div>
+<div class="adminSec" id="tCode"><p class="muted">Code d'accès 30 j pour un tiers :</p><div class="actions"><button class="primary" id="btnGenCode">🎟️ Générer</button></div><div id="codeOut" class="detail" style="display:none"></div></div>
 </div></div></div>
-<div class="modal" id="lockModal"><div class="sheetModal"><h3>🔐 Accès requis</h3><p class="muted">• <b>Admin</b> : bouton 🔐 + mot de passe.<br>• <b>Tiers</b> : entrez un code d'accès 30 jours fourni par l'admin.</p>
-<input id="lockCode" placeholder="Code d'accès (MRT-…)"><div class="actions"><button class="primary" id="btnLockOk">🔓 Valider le code</button><button class="ghost" id="btnLockAdmin">🔐 Admin</button></div><div id="lockMsg" class="muted"></div></div></div>
+<div class="modal" id="lockModal"><div class="sheetModal"><h3>🔐 Accès requis</h3><p class="muted">• <b>Admin</b> : 🔐 + mot de passe.<br>• <b>Tiers</b> : code 30 j fourni par l'admin.</p>
+<input id="lockCode" placeholder="Code d'accès (MRT-…)"><div class="actions"><button class="primary" id="btnLockOk">🔓 Valider</button><button class="ghost" id="btnLockAdmin">🔐 Admin</button></div><div id="lockMsg" class="muted"></div></div></div>
 <div id="toast"></div><div id="printSheet"></div>
 <script>
 'use strict';
-/* ===== CONFIG ===== */
-var SECRET='KEVIN2026';
-var ADMIN_PASS='Kevin83600';
-var APP_V='v28_sport';
-var WEEK=7*24*36e5;
-/* ===== UTILS ===== */
+var SECRET='KEVIN2026',ADMIN_PASS='Kevin83600',APP_V='v29_massive',WEEK=7*24*36e5;
 function $(s){return document.querySelector(s);}
 function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
 function h(s){var x=7;for(var i=0;i<s.length;i++)x=(x*31+s.charCodeAt(i))>>>0;return x.toString(36);}
 function toast(m){var t=$('#toast');t.textContent=m;t.style.display='block';clearTimeout(t._x);t._x=setTimeout(function(){t.style.display='none';},3500);}
 function norm(s){return (s||'').toLowerCase().replace(/[.\-\s]+/g,'');}
-/* ===== DTC (P20EE garanti) ===== */
-var DTC={'P0016':['Corrélation vilo/AAC admission','Distribution décalée, capteur, VVT','Contrôle calage, capteurs, phasers'],'P0087':['Pression rail basse','Pompe HP, filtre, limaille','Contrôle pression, pompe, rinçage'],'P0299':['Pression turbo basse','Fuite, wastegate, turbo, EGR','Contrôle durites/wastegate/turbo'],'P0300':['Ratés multiples','Bobines, bougies, injecteurs','Bobines/bougies, compressions'],'P0401':['EGR débit insuffisant','Vanne encrassée','Nettoie/remplace EGR'],'P0420':['Catalyseur efficacité basse','Catalyseur, sondes','Contrôle sondes + cata'],'P0700':['Calculateur boîte défaut','Mécatronique','Diagnostic boîte, MAJ'],'P0776':['Électrovanne pression B','Mécatronique','Vidange + mécatro'],'P17BF':['Mécatronique DSG','DQ200','MAJ + mécatro'],'P1811':['Sélection vitesse impossible (N bloqué)','ECU transmission','Mise en veille ou MAJ concession'],'P2002':['FAP efficacité basse','FAP colmaté','Régénération, contrôle FAP'],'P202E':['AdBlue injection faible','Injecteur bouché','Contrôle injecteur + pompe'],'P204D':['AdBlue qualité/capteur','AdBlue contaminé','Contrôle qualité + capteur'],'P207F':['AdBlue qualité réservoir','Contamination','Vidange + AdBlue neuf'],'P20BA':['AdBlue chauffe injecteur','Résistance chauffe','Contrôle injecteur + résistance'],'P20EE':['Rendement catalyseur SCR insuffisant pour traiter les NOx','Catalyseur SCR dégradé, AdBlue contaminé, injecteur AdBlue bouché, capteur NOx HS, fuite échappement','1) Qualité AdBlue 2) Injecteur AdBlue 3) Capteurs NOx 4) T° SCR 5) Catalyseur SCR 6) Fuites'],'P2200':['NOx capteur circuit','Capteur NOx','Contrôle capteur + faisceau'],'P242F':['FAP restriction suie','FAP colmaté','Régénération/remplacement'],'P2463':['FAP suie excessive','Régénérations incomplètes','Régénération, entretien'],'C0035':['Capteur roue AV G','Capteur/câblage','Remplace capteur'],'C1103':['Radar Front Assist','Radar sali','Nettoie/calibre'],'B0001':['Airbag conducteur','Clockspring','Diagnostic SRS'],'B1000':['Calculateur airbag','Calculateur','Diagnostic SRS'],'U0155':['Perte comm multimédia','Head unit','MAJ/remplacement'],'U1233':['Écran reboots','Software','MAJ firmware'],'P0A80':['Batterie HT à remplacer','Modules déséquilibrés','Équilibrage/remplacement'],'P0AA6':['Isolement batterie HT','Pack/câbles','Diagnostic HV agréé'],'P0C78':['DC/DC défaillant','DC-DC','Contrôle/remplace'],'P1E00':['Défaut charge VE','OBC/câble/borne','Contrôle OBC/prise']};
-function extractDtc(t){if(!t)return[];var r=[],seen={},m,re=/[PCBU][0-9A-F]{4,5}/g,u=String(t).toUpperCase();while((m=re.exec(u))){if(m[0].length===5&&!seen[m[0]]){seen[m[0]]=1;r.push(m[0]);}}return r;}
+/* DTC */
+var DTC={'P0016':['Corrélation vilo/AAC','Distribution décalée','Contrôle calage/capteurs'],'P0087':['Pression rail basse','Pompe HP/filtre','Contrôle pression/pompe'],'P0299':['Pression turbo basse','Fuite/wastegate/turbo','Contrôle turbo/durites'],'P0300':['Ratés multiples','Bobines/bougies/injecteurs','Bobines/bougies'],'P0401':['EGR insuffisant','Vanne encrassée','Nettoyer EGR'],'P0420':['Catalyseur efficacité','Cata/sondes','Contrôle sondes+cata'],'P0700':['Calculateur boîte','Mécatronique','Diagnostic boîte'],'P0776':['Électrovanne pression B','Mécatronique','Vidange+mécatro'],'P17BF':['Mécatronique DSG','DQ200','MAJ+mécatro'],'P1811':['Vitesse impossible (N)','ECU transmission','Mise en veille/MAJ'],'P2002':['FAP efficacité basse','FAP colmaté','Régénération'],'P202E':['AdBlue injection faible','Injecteur bouché','Contrôle injecteur'],'P204D':['AdBlue qualité','AdBlue contaminé','Contrôle qualité'],'P207F':['AdBlue réservoir','Contamination','Vidange+AdBlue'],'P20BA':['AdBlue chauffe','Résistance chauffe','Contrôle injecteur'],'P20EE':['Rendement SCR insuffisant (NOx)','SCR/AdBlue/injecteur/NOx','AdBlue+injecteur+NOx+SCR'],'P2200':['NOx capteur circuit','Capteur NOx','Contrôle capteur'],'P242F':['FAP suie','FAP colmaté','Régénération'],'P2463':['FAP suie excessive','Régénérations','Régénération'],'C0035':['Capteur roue AV G','Capteur/câblage','Remplacer capteur'],'C1103':['Radar Front Assist','Radar sali','Calibrer radar'],'B0001':['Airbag conducteur','Clockspring','Diagnostic SRS'],'B1000':['Calculateur airbag','Calculateur','Diagnostic SRS'],'U0155':['Perte multimédia','Head unit','MAJ/remplacement'],'U1233':['Écran reboots','Software','MAJ firmware'],'P0A80':['Batterie HT','Modules','Équilibrage'],'P0AA6':['Isolement HT','Pack','Diagnostic HV'],'P0C78':['DC/DC','DC-DC','Contrôle DC-DC'],'P1E00':['Charge VE','OBC/borne','Contrôle OBC']};
+function extractDtc(t){if(!t)return[];var r=[],s={},m,re=/[PCBU][0-9A-F]{4,5}/g,u=String(t).toUpperCase();while((m=re.exec(u))){if(m[0].length===5&&!s[m[0]]){s[m[0]]=1;r.push(m[0]);}}return r;}
 function dtcInfo(c){return DTC[(c||'').toUpperCase().trim()]||null;}
 function dtcSuggest(q,n){q=(q||'').toUpperCase().replace(/\s/g,'');var o=[];for(var k in DTC){if(k.indexOf(q)>-1){o.push({code:k,label:DTC[k][0]});if(o.length>=n)break;}}return o;}
-/* ===== DONNÉES COMPACTES ===== */
+/* DONNÉES */
 var BRANDS='Renault|FR,Peugeot|FR,Citroën|FR,DS|FR,Alpine|FR,Volkswagen|EU,Audi|EU,BMW|EU,Mercedes-Benz|EU,Opel|EU,Porsche|EU,SEAT|EU,Škoda|EU,Fiat|EU,Alfa Romeo|EU,Dacia|EU,Volvo|EU,Polestar|EU,Jaguar|EU,Land Rover|EU,MINI|EU,Toyota|AS,Lexus|AS,Honda|AS,Nissan|AS,Mazda|AS,Subaru|AS,Suzuki|AS,Mitsubishi|AS,Hyundai|AS,Kia|AS,BYD|AS,MG|AS,NIO|AS,XPeng|AS,Geely|AS,Li Auto|AS,Zeekr|AS,Leapmotor|AS,Chery|AS,Omoda|AS,Jaecoo|AS,Haval|AS,Tank|AS,Voyah|AS,Hongqi|AS,Maxus|AS,Wuling|AS,Baojun|AS,Xiaomi Auto|AS,AITO|AS,Denza|AS,Yangwang|AS,Tata|AS,Mahindra|AS,VinFast|AS,Ford|US,Chevrolet|US,Jeep|US,Tesla|US,GMC|US,Cadillac|US,Dodge|US,Ram|US'.split(',').map(function(x){var p=x.split('|');return{n:p[0],o:p[1]};});
 var MODELS={'Renault':'Clio,Captur,Mégane,Scénic,Zoe,Twingo,Arkana,Austral,Symbioz,R5 E-Tech,R4 E-Tech,Kangoo,Trafic,Master','Peugeot':'208,e-208,2008,e-2008,308,3008,5008,508,e-3008','Citroën':'C3,ë-C3,C4,ë-C4,C5 Aircross,Berlingo','DS':'DS3,DS4,DS7','Volkswagen':'Polo,Golf,Tiguan,Passat,ID.3,ID.4,ID.5,ID.7,ID. Buzz,T-Roc,T-Cross','Audi':'A3,A4,Q3,Q4 e-tron,Q5,e-tron','BMW':'Série 3,Série 5,X3,X5,i3,iX','Mercedes-Benz':'Classe C,Classe E,GLC,EQC','Škoda':'Octavia,Enyaq,Elroq,Kodiaq,Fabia','Porsche':'Taycan,Cayenne,Macan','Toyota':'Yaris,Corolla,RAV4,Prius,C-HR,bZ4X','Honda':'Civic,CR-V,Jazz','Nissan':'Qashqai,Leaf,Juke,Ariya','Mazda':'3,CX-5,CX-60','Hyundai':'Tucson,Kona,Ioniq 5','Kia':'Sportage,EV6,Niro,EV9','BYD':'Atto 3,Seal,Dolphin,Han,Tang','MG':'MG4,HS,ZS EV','Tesla':'Model 3,Model Y,Model S','Ford':'Kuga,Focus,Mustang Mach-E','Jeep':'Compass,Wrangler','Dacia':'Duster,Sandero,Spring,Jogger','Volvo':'XC60,XC40,EX30','Xiaomi Auto':'SU7,YU7','NIO':'ET7,EL6','XPeng':'G9,P7','Zeekr':'001,X','Li Auto':'L9,L7','Hongqi':'E-HS9,H5','Wuling':'Hongguang Mini EV,Bingo'};
-var ENGINES={'R5 E-Tech':'EV40 95|électrique,EV40 120|électrique,EV52 150|électrique','ID.4':'Pure 148|électrique,Pro 204|électrique,GTX 299|électrique','Elroq':'50 170|électrique,60 204|électrique,85 286|électrique','3008':'1.2 PureTech 130|essence,1.5 BlueHDi 130|diesel,Hybrid 225|hybride rechargeable','Golf':'1.5 TSI 150|essence,2.0 TDI 150|diesel,eHybrid 245|hybride rechargeable','Model 3':'Propulsion|électrique,Performance|électrique','Atto 3':'60.5 kWh 204|électrique','Zoe':'R110|électrique,R135|électrique','Clio':'1.0 TCe 90|essence,1.5 Blue dCi 100|diesel,E-Tech 145|hybride'};
-var FUEL_T={'diesel':[['EGR encrassée','Perte puissance',['P0401'],'Nettoyer EGR','Dépollution'],['FAP colmaté','Mode dégradé',['P2002'],'Régénération','Dépollution'],['Injecteurs fuite','Claquements',['P0201'],'Test injecteurs','Moteur'],['Turbo GV','Manque puissance',['P0299'],'Contrôle turbo','Moteur']],'essence':[['Bobines ratés','Voyant clignotant',['P0300'],'Bobines/bougies','Moteur'],['Injecteurs encrassés','Ralenti irrégulier',['P0200'],'Nettoyage','Moteur'],['MAF','Perte puissance',['P0101'],'Nettoyer MAF','Moteur']],'électrique':[['Charge OBC','Charge lente',['P0C78','P1E00'],'Contrôle OBC/borne','Électrique'],['Batterie SOH','Autonomie basse',['P0A80'],'Équilibrage modules','Électrique'],['DC/DC','12V faible',['P0C78'],'Contrôle DC-DC','Électrique']],'hybride':[['Onduleur','Voyant hybride',['P0A78'],'Contrôle onduleur','Électrique'],['Batterie hybride','Autonomie EV basse',['P0A80'],'Équilibrage','Électrique']]};
-var SYSTEMS=[['Capteur ABS roue','Voyant ABS',['C0035'],'Remplacer capteur','ABS'],['Calibration ADAS','Alertes ADAS',['U-codes'],'Calibration caméra/radar','ADAS'],['Contacteur airbag','Voyant airbag',['B1000'],'Remplacer contacteur','Airbag'],['Prétensionneur ceinture','Voyant ceinture',['B-codes'],'Remplacer prétensionneur','Ceinture'],['Étrier frein grippé','Frein tire',['C-codes'],'Contrôle étrier','Freinage'],['Multimédia reboots','Écran noir',['U0155'],'MAJ firmware','Électronique'],['TPMS','Voyant pneus',['C0750'],'Remplacer capteur','Électronique'],['Caméra recul','Image figée',['C-codes'],'Calibration','Caméra'],['Charge 12V','Voyant batterie',['P0562'],'Test alternateur','Électrique'],['Direction assistée','Alerte direction',['C0500'],'Contrôle colonne','Électronique']];
-/* ===== INDEXEDDB ===== */
+var ENGINES={'R5 E-Tech':'EV40 120|électrique,EV52 150|électrique','ID.4':'Pro 204|électrique,GTX 299|électrique','Elroq':'60 204|électrique,85 286|électrique','3008':'1.2 PureTech 130|essence,1.5 BlueHDi 130|diesel,Hybrid 225|hybride','Golf':'1.5 TSI 150|essence,2.0 TDI 150|diesel','Model 3':'Propulsion|électrique','Atto 3':'60.5 kWh 204|électrique','Zoe':'R110|électrique','Clio':'1.0 TCe 90|essence,1.5 Blue dCi 100|diesel,E-Tech 145|hybride'};
+/* PANNES PAR CARBURANT */
+var FUEL_T={'diesel':[['EGR encrassée','Perte puissance',['P0401'],'Nettoyer EGR','Dépollution'],['FAP colmaté','Mode dégradé',['P2002'],'Régénération','Dépollution'],['Injecteurs fuite','Claquements',['P0201'],'Test injecteurs','Moteur'],['Turbo GV','Manque puissance',['P0299'],'Contrôle turbo','Moteur'],['AdBlue/SCR','Voyant AdBlue',['P20EE'],'Qualité AdBlue+injecteur+NOx','Dépollution']],'essence':[['Bobines ratés','Voyant clignotant',['P0300'],'Bobines/bougies','Moteur'],['Injecteurs encrassés','Ralenti irrégulier',['P0200'],'Nettoyage','Moteur'],['MAF','Perte puissance',['P0101'],'Nettoyer MAF','Moteur'],['Courroie/chaîne distri','Bruit voyant',['P0016'],'Kit distribution','Moteur']],'électrique':[['Charge OBC','Charge lente',['P0C78','P1E00'],'Contrôle OBC/borne','Électrique'],['Batterie SOH','Autonomie basse',['P0A80'],'Équilibrage modules','Électrique'],['DC/DC','12V faible',['P0C78'],'Contrôle DC-DC','Électrique'],['Pompe HT','Limitation puissance',['P0A93'],'Contrôle pompe','Électrique']],'hybride':[['Onduleur','Voyant hybride',['P0A78'],'Contrôle onduleur','Électrique'],['Batterie hybride','Autonomie EV basse',['P0A80'],'Équilibrage','Électrique'],['e-CVT','Bruit moulinage',['P0700'],'Contrôle huile/planétaires','Transmission']]};
+/* PANNES CATÉGORIELLES (tous modèles) */
+var CAT_T=[
+['Boîte manuelle synchros','Passages difficiles',['—'],'Vidange/synchros','Transmission'],
+['Boîte auto à-coups','Passages brutaux',['P0700'],'Vidange+MAJ/mécatro','Transmission'],
+['Embrayage usé','Patine',['—'],'Kit embrayage','Transmission'],
+['Cardan','Claquements virage',['—'],'Cardan/rotule','Transmission'],
+['Calculateur airbag','Voyant permanent',['B1000'],'Relecture/remplacement','Airbag'],
+['Gonfleur coussin','Voyant après choc',['B0001'],'Module gonfleur','Airbag'],
+['Clockspring','Klaxon/commandes HS',['B1600'],'Contacteur tournant','Airbag'],
+['Prétensionneur ceinture','Voyant ceinture',['B0050'],'Remplacer prétensionneur','Ceinture'],
+['Enrouleur ceinture','Sangle bloquée',['—'],'Remplacer enrouleur','Ceinture'],
+['Amortisseurs','Claquements pompage',['—'],'Amortisseurs+coupelles','Train'],
+['Rotules/biellettes','Jeu claquements',['—'],'Rotules/biellettes','Train'],
+['Roulements roue','Ronflement',['—'],'Roulement','Train'],
+['Crémaillère direction','Fuite/dureté',['C0710'],'Direction/crémaillère','Train'],
+['Disques/plaquettes','Vibrations usure',['—'],'Disques+plaquettes','Freinage'],
+['Étrier grippé','Frein tire',['—'],'Étrier','Freinage'],
+['Module ABS','Voyant ABS',['C0110'],'Module ABS','ABS'],
+['TPMS','Voyant pneus',['C0750'],'Capteur TPMS','Train'],
+['Caméra ADAS','Alertes maintien voie',['C-codes'],'Calibration caméra','ADAS'],
+['Radar AV','Régulateur indispo',['C1103'],'Calibration radar','ADAS'],
+['AEB freinage urgence','Activation intempestive',['C-codes'],'Calibration+MAJ','ADAS'],
+['Écran multimédia','Reboots noir',['U0155','U1233'],'MAJ/reset/remplacement','Électronique'],
+['Tactile','Zones mortes',['U-codes'],'Dalle/tactile','Électronique'],
+['Combiné instruments','Compteurs erronés',['U-codes'],'Combiné','Électronique'],
+['GPS','Perte position',['—'],'MAJ carto/antenne','Électronique'],
+['Batterie 12V','Démarrage difficile',['P0562'],'Batterie 12V','Électrique'],
+['Alternateur','Voyant charge',['P0562'],'Alternateur','Électrique'],
+['Démarreur','Clic ne lance pas',['—'],'Démarreur','Électrique'],
+['Fuite LDR/radiateur','Surchauffe',['P0217'],'Radiateur/durites','Moteur'],
+['Pompe à eau','Surchauffe bruit',['P0217'],'Pompe à eau','Moteur'],
+['Thermostat','T° anormale',['P0128'],'Thermostat','Moteur'],
+['Compresseur clim','Pas de froid',['P0532'],'Charge/compresseur','Électronique'],
+['BSI/BCM','Fonctions aléatoires',['U-codes'],'Reset/BSI','Électronique'],
+['Centralisation','Verrouillage HS',['B3028'],'Récepteur/serrures','Électronique'],
+['Lève-vitre','Vitre descend',['B-codes'],'Moteur lève-vitre','Électronique'],
+['Hayon électrique','Ouverture aléatoire',['B1234'],'Moteur hayon','Électronique']];
+/* INDEXEDDB */
 var DB=null;
 function idb(){return new Promise(function(res,rej){var r=indexedDB.open('mrt',1);r.onupgradeneeded=function(e){var d=e.target.result;['brands','models','engines','sheets'].forEach(function(s){if(!d.objectStoreNames.contains(s))d.createObjectStore(s,{keyPath:'id'});});};r.onsuccess=function(){DB=r.result;res(DB);};r.onerror=function(){rej(r.error);};});}
-function tx(store,mode){return DB.transaction(store,mode).objectStore(store);}
-function all(store){return new Promise(function(res){tx(store,'readonly').getAll().onsuccess=function(e){res(e.target.result||[]);};});}
-function put(store,v){return new Promise(function(res){var t=DB.transaction(store,'readwrite');t.objectStore(store).put(v);t.oncomplete=res;});}
-function bulk(store,arr){return new Promise(function(res){var t=DB.transaction(store,'readwrite');arr.forEach(function(v){t.objectStore(store).put(v);});t.oncomplete=res;});}
-function clearS(store){return new Promise(function(res){var t=DB.transaction(store,'readwrite');t.objectStore(store).clear();t.oncomplete=res;});}
-/* ===== GÉNÉRATION ===== */
+function all(s){return new Promise(function(res){DB.transaction(s,'readonly').objectStore(s).getAll().onsuccess=function(e){res(e.target.result||[]);};});}
+function put(s,v){return new Promise(function(res){var t=DB.transaction(s,'readwrite');t.objectStore(s).put(v);t.oncomplete=res;});}
+function bulk(s,a){return new Promise(function(res){var t=DB.transaction(s,'readwrite');a.forEach(function(v){t.objectStore(s).put(v);});t.oncomplete=res;});}
+function clearS(s){return new Promise(function(res){var t=DB.transaction(s,'readwrite');t.objectStore(s).clear();t.oncomplete=res;});}
+/* GÉNÉRATION MASSIVE */
 function buildSheets(){
  var out=[],seen={};
  function push(b,m,e,cat,t,s,d,f,src,off){var id='g'+h(b+m+e+t);if(seen[id])return;seen[id]=1;out.push({id:id,b:b,m:m,e:e||'',cat:cat,titre:t,sym:s,dtc:d,fix:f,src:src,off:off?1:0});}
  Object.keys(MODELS).forEach(function(b){MODELS[b].split(',').forEach(function(m){
-  SYSTEMS.forEach(function(s){push(b,m,'',s[4],m+' : '+s[0],s[1],s[2],s[3],'Base système');});
+  CAT_T.forEach(function(c){push(b,m,'',c[4],m+' : '+c[0],c[1],c[2],c[3],'Base catégorie');});
   var eng=(ENGINES[m]||'1.0 essence|essence,1.5 diesel|diesel,Hybride|hybride,Électrique|électrique').split(',');
-  eng.forEach(function(es){var p=es.split('|');var ft=FUEL_T[p[1]]||FUEL_T.essence;ft.forEach(function(f){push(b,m,p[0],f[4],m+' '+p[0]+' : '+f[0],f[1],f[2],f[3],'Base motorisation');});});
+  eng.forEach(function(es){var p=es.split('|');(FUEL_T[p[1]]||FUEL_T.essence).forEach(function(f){push(b,m,p[0],f[4],m+' '+p[0]+' : '+f[0],f[1],f[2],f[3],'Base motorisation');});});
  });});
  return out;
 }
@@ -144,76 +174,72 @@ async function seed(){
  var sh=buildSheets();
  await bulk('brands',bs);await bulk('models',ms);await bulk('engines',es);await bulk('sheets',sh);
  localStorage.setItem('seed_'+APP_V,'1');
- toast('✅ Base : '+sh.length.toLocaleString('fr-FR')+' fiches générées');
+ toast('✅ Base massive : '+sh.length.toLocaleString('fr-FR')+' fiches');
 }
-/* ===== ACCÈS (admin + code tiers 30j) ===== */
+/* ACCÈS */
 function isAdmin(){return sessionStorage.getItem('adm')==='1';}
-function grant(){var g=localStorage.getItem('grant');if(!g)return false;var p=g.split('.');if(p.length!==2)return false;var exp=parseInt(p[0],36);if(Date.now()>exp)return false;return h(SECRET+p[0])===p[1];}
-function makeCode(days){var exp=Date.now()+days*24*36e5;var e36=exp.toString(36);return 'MRT-'+e36+'-'+h(SECRET+e36);}
-function checkCode(c){c=(c||'').trim().replace(/^MRT-/i,'');var p=c.split('-');if(p.length!==2)return false;var exp=parseInt(p[0],36);if(!exp||Date.now()>exp)return false;return h(SECRET+p[0])===p[1];}
-function ensureLock(){
- if(isAdmin()||grant()||checkCode(localStorage.getItem('grant_raw')||''))return;
- $('#lockModal').classList.add('show');
-}
-/* ===== SYNC OFFICIEL ===== */
+function grant(){var g=localStorage.getItem('grant');if(!g)return false;var p=g.split('.');if(p.length!==2)return false;if(Date.now()>parseInt(p[0],36))return false;return h(SECRET+p[0])===p[1];}
+function makeCode(d){var e=(Date.now()+d*24*36e5).toString(36);return 'MRT-'+e+'-'+h(SECRET+e);}
+function checkCode(c){c=(c||'').trim().replace(/^MRT-/i,'');var p=c.split('-');if(p.length!==2)return false;var e=parseInt(p[0],36);if(!e||Date.now()>e)return false;return h(SECRET+p[0])===p[1];}
+function ensureLock(){if(isAdmin()||grant())return;$('#lockModal').classList.add('show');}
+/* SYNC */
 function strip(s){return s.normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
-function cls(t){t=(t||'').toLowerCase();if(/airbag|srs|takata/.test(t))return'Airbag';if(/ceinture|belt/.test(t))return'Ceinture';if(/adas|radar|autopilot/.test(t))return'ADAS';if(/cam/.test(t))return'Caméra';if(/abs|antibloc/.test(t))return'ABS';if(/frein|brake/.test(t))return'Freinage';if(/batter|hv|bms|lithium/.test(t))return'Électrique';if(/bo[iî]te|dsg|cvt|embray/.test(t))return'Transmission';if(/egr|fap|adblue|scr|nox/.test(t))return'Dépollution';if(/moteur|turbo|inject/.test(t))return'Moteur';return'Électronique';}
-async function syncNHTSA(b,m){var n=0;try{var r=await fetch('https://api.nhtsa.gov/recalls/recallsByVehicle?make='+encodeURIComponent(strip(b).toUpperCase())+'&model='+encodeURIComponent(m));var j=await r.json();(j.results||[]).forEach(function(rec){put('sheets',{id:'n'+rec.NHTSACampaignNumber,b:b,m:m,e:'',cat:cls(rec.Component),titre:'Rappel NHTSA : '+rec.Component,sym:rec.Summary||'',dtc:[rec.NHTSACampaignNumber],fix:rec.Remedy||'Contacter le réseau',src:'NHTSA',off:1});n++;});}catch(e){}return n;}
+function cls(t){t=(t||'').toLowerCase();if(/airbag|srs|takata/.test(t))return'Airbag';if(/ceinture|belt/.test(t))return'Ceinture';if(/adas|radar|autopilot/.test(t))return'ADAS';if(/cam/.test(t))return'Caméra';if(/abs/.test(t))return'ABS';if(/frein|brake/.test(t))return'Freinage';if(/batter|hv|bms/.test(t))return'Électrique';if(/bo[iî]te|dsg|cvt|embray/.test(t))return'Transmission';if(/egr|fap|adblue|scr|nox/.test(t))return'Dépollution';if(/susp|rotule|roulement|direction|tpms/.test(t))return'Train';if(/moteur|turbo|inject/.test(t))return'Moteur';return'Électronique';}
+async function syncNHTSA(b,m){var n=0;try{var r=await fetch('https://api.nhtsa.gov/recalls/recallsByVehicle?make='+encodeURIComponent(strip(b).toUpperCase())+'&model='+encodeURIComponent(m));var j=await r.json();(j.results||[]).forEach(function(rec){put('sheets',{id:'n'+rec.NHTSACampaignNumber,b:b,m:m,e:'',cat:cls(rec.Component),titre:'Rappel NHTSA : '+rec.Component,sym:rec.Summary||'',dtc:[rec.NHTSACampaignNumber],fix:rec.Remedy||'Contacter réseau',src:'NHTSA',off:1});n++;});}catch(e){}return n;}
 async function syncTSB(b,m){var n=0;try{var r=await fetch('https://api.nhtsa.gov/tsb/tsbsByVehicle?make='+encodeURIComponent(strip(b).toUpperCase())+'&model='+encodeURIComponent(m));var j=await r.json();(j.results||[]).forEach(function(rec){put('sheets',{id:'t'+(rec.tsbNumber||h(rec.title)),b:b,m:m,e:'',cat:cls(rec.component),titre:'TSB : '+String(rec.title||'').slice(0,90),sym:rec.summary||'',dtc:[rec.tsbNumber||''],fix:rec.remedy||'Procédure constructeur',src:'NHTSA TSB',off:1});n++;});}catch(e){}return n;}
 async function syncConso(b,m){var n=0;try{var r=await fetch('https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/rappels-produits/records?limit=50&where='+encodeURIComponent('search(produit,"'+b+' '+m+'")'));var j=await r.json();(j.results||[]).forEach(function(rec){put('sheets',{id:'c'+h(JSON.stringify(rec)),b:b,m:m,e:'',cat:cls(rec.motif),titre:'Rappel Conso : '+String(rec.motif||'').slice(0,90),sym:rec.produit||'',dtc:[],fix:rec.conduites_a_suivre||'Voir fiche',src:'Rappel Conso',off:1});n++;});}catch(e){}return n;}
-async function syncAllFor(b,m){var t=await syncNHTSA(b,m);t+=await syncTSB(b,m);t+=await syncConso(b,m);return t;}
+async function syncAllFor(b,m){return (await syncNHTSA(b,m))+(await syncTSB(b,m))+(await syncConso(b,m));}
 async function weeklyUpdate(force){
  var last=parseInt(localStorage.getItem('lastUpdate')||'0');
  if(!force&&Date.now()-last<WEEK)return;
- if(!navigator.onLine){toast('Hors ligne — MàJ impossible');return;}
+ if(!navigator.onLine)return toast('Hors ligne');
  await idb();
  var wl=JSON.parse(localStorage.getItem('watch')||'[]').slice(0,6);
- if(!wl.length){toast('Consultez d\u2019abord des modèles à suivre');return;}
- toast('🔄 MàJ hebdo : '+wl.length+' véhicule(s)…');
- var tot=0;for(var i=0;i<wl.length;i++){tot+=await syncAllFor(wl[i].b,wl[i].m);}
+ if(!wl.length)return toast('Consultez des modèles d\u2019abord');
+ toast('🔄 MàJ hebdo…');var t=0;
+ for(var i=0;i<wl.length;i++)t+=await syncAllFor(wl[i].b,wl[i].m);
  localStorage.setItem('lastUpdate',String(Date.now()));
- toast('✅ MàJ terminée : +'+tot+' fiches officielles');
- refreshStats();
+ toast('✅ +'+t+' fiches officielles');refreshStats();
 }
-/* ===== UI ===== */
+/* UI */
 var state={group:'ALL',brand:null,model:null,engine:null,fuel:'Tous',cat:'Tous',q:''};
-function card(s){var d=document.createElement('div');d.className='sheet';d.innerHTML='<div><span class="cat c-'+esc(s.cat)+'">'+esc(s.cat)+'</span> <b>'+esc(s.titre)+'</b><span class="src '+(s.off?'off':'')+'">'+esc(s.src||'')+'</span></div><div>📋 '+esc(s.sym||'')+'</div><div>🔧 '+(s.dtc&&s.dtc.length?esc(s.dtc.join(' · ')):'—')+'</div><div>✅ '+esc(s.fix||'')+'</div>';d.onclick=function(){openSheet(s);};return d;}
+var CATS=['Tous','Moteur','Transmission','Électrique','Électronique','Airbag','Ceinture','ABS','ADAS','Caméra','Freinage','Train','Dépollution'];
+function card(s){var d=document.createElement('div');d.className='sheet';d.innerHTML='<div><span class="cat c-'+esc(s.cat)+'">'+esc(s.cat)+'</span> <b>'+esc(s.titre)+'</b><span class="src '+(s.off?'off':'')+'">'+esc(s.src||'')+'</span></div><div>📋 '+esc(s.sym||'')+'</div><div>🔧 '+((s.dtc&&s.dtc.length)?esc(s.dtc.join(' · ')):'—')+'</div><div>✅ '+esc(s.fix||'')+'</div>';d.onclick=function(){openSheet(s);};return d;}
 function openSheet(s){$('#smCat').textContent=s.cat;$('#smCat').className='cat c-'+s.cat;$('#smVeh').textContent=s.b+' '+s.m+(s.e?' — '+s.e:'');$('#smTitle').textContent=s.titre;$('#smSym').textContent=s.sym||'—';$('#smDtc').textContent=(s.dtc||[]).join(' · ')||'—';$('#smFix').textContent=s.fix||'—';$('#smSrc').textContent=s.src||'—';$('#sheetModal').classList.add('show');window._cur=s;}
 async function renderBrands(){await idb();var bs=await all('brands');if(state.group!=='ALL')bs=bs.filter(function(b){return b.origin===state.group;});if(state.q)bs=bs.filter(function(b){return b.name.toLowerCase().indexOf(state.q)>-1;});var g=$('#brandGrid');g.innerHTML='';bs.forEach(function(b){var d=document.createElement('div');d.className='brandBtn';d.innerHTML='<b>'+esc(b.name)+'</b><span>'+b.origin+'</span>';d.onclick=function(){selBrand(b.name);};g.appendChild(d);});}
 async function selBrand(n){state.brand=n;$('#modelsDrawer').style.display='';$('#modelsTitle').textContent='Modèles — '+n;var ms=(await all('models')).filter(function(x){return x.b===n;});var l=$('#modelList');l.innerHTML='';ms.forEach(function(x){var d=document.createElement('div');d.className='rowItem';d.innerHTML='<b>'+esc(x.m)+'</b><span>▸</span>';d.onclick=function(){selModel(x.m);};l.appendChild(d);});}
 async function selModel(m){state.model=m;var wl=JSON.parse(localStorage.getItem('watch')||'[]');wl=wl.filter(function(x){return !(x.b===state.brand&&x.m===m);});wl.unshift({b:state.brand,m:m});localStorage.setItem('watch',JSON.stringify(wl.slice(0,20)));$('#enginesDrawer').style.display='';$('#enginesTitle').textContent='Motorisations — '+state.brand+' '+m;var es=(await all('engines')).filter(function(x){return x.b===state.brand&&x.m===m;});var l=$('#engineList');l.innerHTML='';var d0=document.createElement('div');d0.className='rowItem';d0.innerHTML='<b>📂 Tout le modèle</b>';d0.onclick=function(){selEngine(null);};l.appendChild(d0);es.forEach(function(x){var d=document.createElement('div');d.className='rowItem';d.innerHTML='<b>'+esc(x.e)+'</b><span>'+esc(x.fuel)+'</span>';d.onclick=function(){selEngine(x.e);};l.appendChild(d);});}
-async function selEngine(e){state.engine=e;$('#sheetsDrawer').style.display='';renderSheets();}
-async function renderSheets(){var sh=(await all('sheets')).filter(function(s){return s.b===state.brand&&s.m===state.model;});if(state.engine)sh=sh.filter(function(s){return !s.e||s.e===state.engine;});if(state.cat!=='Tous')sh=sh.filter(function(s){return s.cat===state.cat;});$('#sheetsTitle').textContent='Fiches ('+sh.length+') — '+state.brand+' '+state.model;var l=$('#sheetList');l.innerHTML='';sh.slice(0,200).forEach(function(s){l.appendChild(card(s));});}
+function selEngine(e){state.engine=e;$('#sheetsDrawer').style.display='';renderSheets();}
+async function renderSheets(){var sh=(await all('sheets')).filter(function(s){return s.b===state.brand&&s.m===state.model;});if(state.engine)sh=sh.filter(function(s){return !s.e||s.e===state.engine;});if(state.cat!=='Tous')sh=sh.filter(function(s){return s.cat===state.cat;});$('#sheetsTitle').textContent='Fiches ('+sh.length+') — '+state.brand+' '+state.model;var l=$('#sheetList');l.innerHTML='';sh.slice(0,300).forEach(function(s){l.appendChild(card(s));});}
+async function detectVeh(q){var ms=await all('models');var b=null,m=null,qn=norm(q);for(var i=0;i<ms.length;i++){var x=ms[i];if(qn.indexOf(norm(x.m))>-1||q.indexOf(x.m.toLowerCase())>-1){m=x.m;b=x.b;break;}}return{b:b,m:m};}
 async function renderGlobal(q){q=(q||'').trim();if(q.length<2)return;var ql=q.toLowerCase();var codes=extractDtc(q);var panel='';
- codes.forEach(function(c){var i=dtcInfo(c);if(i){panel+='<div class="detail" style="border-left:4px solid var(--acc2)"><b>🤖 '+c+'</b><div>'+esc(i[0])+'</div><small>Causes</small>'+esc(i[1])+'<small>Action</small>'+esc(i[2])+'</div>';}});
- var veh=await detectVeh(ql);if(veh.m){panel+='<div class="detail" style="border-left:4px solid var(--acc2)"><b>🚗 '+esc(veh.b)+' '+esc(veh.m)+'</b></div>';}
+ codes.forEach(function(c){var i=dtcInfo(c);if(i)panel+='<div class="detail" style="border-left:4px solid var(--acc2)"><b>🤖 '+c+'</b><div>'+esc(i[0])+'</div><small>Causes</small>'+esc(i[1])+'<small>Action</small>'+esc(i[2])+'</div>';});
+ var veh=await detectVeh(ql);if(veh.m)panel+='<div class="detail" style="border-left:4px solid var(--acc2)"><b>🚗 '+esc(veh.b)+' '+esc(veh.m)+'</b></div>';
  var sh=await all('sheets');var words=ql.split(/\s+/).filter(function(w){return w.length>2;});
  var res=sh.filter(function(s){var ok=(!veh.b||s.b===veh.b)&&(!veh.m||s.m===veh.m);if(!ok)return false;var hay=(s.titre+' '+s.sym+' '+s.b+' '+s.m+' '+(s.dtc||[]).join(' ')).toLowerCase();return words.some(function(w){return hay.indexOf(w)>-1;})||codes.some(function(c){return (s.dtc||[]).join(',').toUpperCase().indexOf(c)>-1;});});
- $('#globalDrawer').style.display='';$('#globalCount').textContent='('+res.length+')';var l=$('#globalList');l.innerHTML=panel;res.slice(0,80).forEach(function(s){l.appendChild(card(s));});}
-async function detectVeh(q){var ms=await all('models');var b=null,m=null,qn=norm(q);for(var i=0;i<ms.length;i++){var x=ms[i];if(qn.indexOf(norm(x.m))>-1||q.indexOf(x.m.toLowerCase())>-1){m=x.m;b=x.b;break;}}return{b:b,m:m};}
-async function refreshStats(){await idb();var r=await Promise.all([all('brands'),all('models'),all('engines'),all('sheets')]);var off=r[3].filter(function(x){return x.off;}).length;$('#statsBox').innerHTML='<span class="stat"><b>'+r[0].length+'</b>marques</span><span class="stat"><b>'+r[1].length+'</b>modèles</span><span class="stat"><b>'+r[2].length+'</b>motorisations</span><span class="stat"><b>'+r[3].length.toLocaleString('fr-FR')+'</b>fiches</span><span class="stat"><b>'+off+'</b>officielles</span><span class="stat"><b>'+Object.keys(DTC).length+'</b>codes DTC</span>';}
-/* ===== GEMINI ===== */
+ $('#globalDrawer').style.display='';$('#globalCount').textContent='('+res.length+')';var l=$('#globalList');l.innerHTML=panel;res.slice(0,100).forEach(function(s){l.appendChild(card(s));});}
+async function refreshStats(){await idb();var r=await Promise.all([all('brands'),all('models'),all('engines'),all('sheets')]);var off=r[3].filter(function(x){return x.off;}).length;$('#statsBox').innerHTML='<span class="stat"><b>'+r[0].length+'</b>marques</span><span class="stat"><b>'+r[1].length+'</b>modèles</span><span class="stat"><b>'+r[2].length+'</b>motorisations</span><span class="stat"><b>'+r[3].length.toLocaleString('fr-FR')+'</b>fiches</span><span class="stat"><b>'+off+'</b>officielles</span><span class="stat"><b>'+Object.keys(DTC).length+'</b>DTC</span>';}
 var GEMINI_KEY='';
-async function askAI(){var q=$('#globalSearch').value;if(!q)return toast('Saisissez une question');var box=$('#aiResult');box.style.display='';box.innerHTML='<div class="detail">🤖 Analyse IA…</div>';
- if(!GEMINI_KEY){box.innerHTML='<div class="detail" style="border-left:4px solid var(--warn)"><b>IA Gemini prête</b><br>Ajoutez votre clé gratuite dans index.html (GEMINI_KEY) : aistudio.google.com/apikey</div>';return;}
- try{var r=await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key='+GEMINI_KEY,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({contents:[{parts:[{text:'Expert auto. Réponds en FR: diagnostic, causes, actions, DTC. Problème: '+q}]}]})});var j=await r.json();box.innerHTML='<div class="detail" style="white-space:pre-wrap">'+esc(j.candidates[0].content.parts[0].text)+'</div>';}catch(e){box.innerHTML='<div class="detail">Erreur IA</div>';}}
-/* ===== EVENTS ===== */
+async function askAI(){var q=$('#globalSearch').value;if(!q)return toast('Saisissez une question');var b=$('#aiResult');b.style.display='';b.innerHTML='<div class="detail">🤖 Analyse…</div>';
+ if(!GEMINI_KEY){b.innerHTML='<div class="detail" style="border-left:4px solid var(--warn)"><b>IA Gemini prête</b><br>Ajoutez votre clé (aistudio.google.com/apikey) dans index.html : GEMINI_KEY.</div>';return;}
+ try{var r=await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key='+GEMINI_KEY,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({contents:[{parts:[{text:'Expert auto FR: diagnostic, causes, actions, DTC. Problème: '+q}]}]})});var j=await r.json();b.innerHTML='<div class="detail" style="white-space:pre-wrap">'+esc(j.candidates[0].content.parts[0].text)+'</div>';}catch(e){b.innerHTML='<div class="detail">Erreur IA</div>';}}
+/* EVENTS */
 document.addEventListener('click',function(e){
- var c=e.target.closest('[data-close]');if(c){$('#'+c.dataset.close).style.display='none';}
- var cm=e.target.closest('[data-closemodal]');if(cm){$('#'+cm.dataset.closemodal).classList.remove('show');}
+ var c=e.target.closest('[data-close]');if(c)$('#'+c.dataset.close).style.display='none';
+ var cm=e.target.closest('[data-closemodal]');if(cm)$('#'+cm.dataset.closemodal).classList.remove('show');
  var tb=e.target.closest('[data-tab]');if(tb){document.querySelectorAll('.adminTabs .chip').forEach(function(x){x.classList.remove('active');});tb.classList.add('active');document.querySelectorAll('.adminSec').forEach(function(x){x.classList.remove('show');});$('#'+tb.dataset.tab).classList.add('show');}
 });
 $('#btnValidate').onclick=function(){renderGlobal($('#globalSearch').value);};
 $('#btnAI').onclick=askAI;
 $('#btnClear').onclick=function(){$('#globalSearch').value='';$('#globalDrawer').style.display='none';$('#suggestBox').style.display='none';};
-$('#globalSearch').addEventListener('input',function(){var q=this.value;var box=$('#suggestBox');if(q.length<2){box.style.display='none';return;}var html='';extractDtc(q).forEach(function(c){var i=dtcInfo(c);if(i)html+='<div class="detail"><b>'+c+'</b> : '+esc(i[0])+'</div>';});dtcSuggest(q,6).forEach(function(s){html+='<div class="rowItem" onclick="document.getElementById(\'globalSearch\').value=\''+s.code+'\';renderGlobal(\''+s.code+'\')"><b>'+s.code+'</b><span>'+esc(s.label.slice(0,50))+'</span></div>';});box.innerHTML=html;box.style.display=html?'':'none';});
-$('#btnDtc1').onclick=function(){var c=extractDtc($('#dtcOnly').value);var box=$('#dtcResult1');if(!c.length){box.innerHTML='<p class="muted">Code invalide</p>';return;}var html='';c.forEach(function(k){var i=dtcInfo(k);html+='<div class="detail" style="border-left:4px solid var(--acc2)"><b>'+k+'</b><div>'+esc(i?i[0]:'Non documenté')+'</div>'+(i?'<small>Causes</small>'+esc(i[1])+'<small>Action</small>'+esc(i[2]):'')+'</div>';});box.innerHTML=html;};
-$('#btnDtc2').onclick=async function(){var q=$('#dtcModel').value;var c=extractDtc(q);var box=$('#dtcResult2');if(!c.length){box.innerHTML='<p class="muted">Ajoutez un DTC</p>';return;}var v=await detectVeh(q.toLowerCase());if(!v.m){box.innerHTML='<p class="muted">Modèle non reconnu</p>';return;}var i=dtcInfo(c[0]);box.innerHTML='<div class="detail" style="border-left:4px solid var(--acc2)"><b>'+esc(v.b)+' '+esc(v.m)+' + '+c[0]+'</b><div>'+esc(i?i[0]:'Code générique')+'</div>'+(i?'<small>Causes</small>'+esc(i[1])+'<small>Action</small>'+esc(i[2]):'')+'</div>';};
+$('#globalSearch').addEventListener('input',function(){var q=this.value,b=$('#suggestBox');if(q.length<2){b.style.display='none';return;}var html='';extractDtc(q).forEach(function(c){var i=dtcInfo(c);if(i)html+='<div class="detail"><b>'+c+'</b> : '+esc(i[0])+'</div>';});dtcSuggest(q,6).forEach(function(s){html+='<div class="rowItem" onclick="document.getElementById(\'globalSearch\').value=\''+s.code+'\';renderGlobal(\''+s.code+'\')"><b>'+s.code+'</b><span>'+esc(s.label.slice(0,50))+'</span></div>';});b.innerHTML=html;b.style.display=html?'':'none';});
+$('#btnDtc1').onclick=function(){var c=extractDtc($('#dtcOnly').value),b=$('#dtcResult1');if(!c.length){b.innerHTML='<p class="muted">Code invalide</p>';return;}var html='';c.forEach(function(k){var i=dtcInfo(k);html+='<div class="detail" style="border-left:4px solid var(--acc2)"><b>'+k+'</b><div>'+esc(i?i[0]:'Non documenté')+'</div>'+(i?'<small>Causes</small>'+esc(i[1])+'<small>Action</small>'+esc(i[2]):'')+'</div>';});b.innerHTML=html;};
+$('#btnDtc2').onclick=async function(){var q=$('#dtcModel').value,c=extractDtc(q),b=$('#dtcResult2');if(!c.length){b.innerHTML='<p class="muted">Ajoutez un DTC</p>';return;}var v=await detectVeh(q.toLowerCase());if(!v.m){b.innerHTML='<p class="muted">Modèle non reconnu</p>';return;}var i=dtcInfo(c[0]);b.innerHTML='<div class="detail" style="border-left:4px solid var(--acc2)"><b>'+esc(v.b)+' '+esc(v.m)+' + '+c[0]+'</b><div>'+esc(i?i[0]:'Code générique')+'</div>'+(i?'<small>Causes</small>'+esc(i[1])+'<small>Action</small>'+esc(i[2]):'')+'</div>';};
 $('#btnAdmin').onclick=function(){$('#adminModal').classList.add('show');};
-$('#btnUnlock').onclick=function(){if($('#adminPass').value===ADMIN_PASS){sessionStorage.setItem('adm','1');$('#adminGate').style.display='none';$('#adminPanel').style.display='';$('#lockModal').classList.remove('show');refreshStats();}else toast('Mot de passe incorrect');};
-$('#btnLockOk').onclick=function(){var c=$('#lockCode').value;if(checkCode(c)){localStorage.setItem('grant_raw',c);var exp=(Date.now()+30*24*36e5).toString(36);localStorage.setItem('grant',exp+'.'+h(SECRET+exp));$('#lockModal').classList.remove('show');toast('✅ Accès 30 jours activé');}else{$('#lockMsg').textContent='Code invalide ou expiré.';}};
+$('#btnUnlock').onclick=function(){if($('#adminPass').value===ADMIN_PASS){sessionStorage.setItem('adm','1');$('#adminGate').style.display='none';$('#adminPanel').style.display='';$('#lockModal').classList.remove('show');refreshStats();}else toast('MDP incorrect');};
+$('#btnLockOk').onclick=function(){var c=$('#lockCode').value;if(checkCode(c)){var e=(Date.now()+30*24*36e5).toString(36);localStorage.setItem('grant',e+'.'+h(SECRET+e));$('#lockModal').classList.remove('show');toast('✅ Accès 30j');}else $('#lockMsg').textContent='Code invalide/expiré.';};
 $('#btnLockAdmin').onclick=function(){$('#lockModal').classList.remove('show');$('#adminModal').classList.add('show');};
-$('#btnGenCode').onclick=function(){var c=makeCode(30);var o=$('#codeOut');o.style.display='';o.innerHTML='<b>'+c+'</b><br><small>Valable 30 jours — transmettez-le au tiers.</small>';};
+$('#btnGenCode').onclick=function(){var o=$('#codeOut');o.style.display='';o.innerHTML='<b>'+makeCode(30)+'</b><br><small>Valable 30 j.</small>';};
 $('#btnForceUpdate').onclick=function(){weeklyUpdate(true);};
 $('#btnUpdate').onclick=function(){weeklyUpdate(true);};
 $('#btnReset').onclick=async function(){if(!confirm('Régénérer ?'))return;await idb();for(var i=0;i<4;i++)await clearS(['brands','models','engines','sheets'][i]);localStorage.removeItem('seed_'+APP_V);await seed();refreshStats();};
@@ -223,21 +249,18 @@ $('#syC').onclick=function(){syncConso(state.brand,state.model).then(function(n)
 $('#syAll').onclick=function(){syncAllFor(state.brand,state.model).then(function(n){toast('+'+n);renderSheets();});};
 $('#btnPrint').onclick=function(){var s=window._cur;if(!s)return;$('#printSheet').innerHTML='<h1>Mon Aide Technique</h1><div class="box"><b>'+esc(s.titre)+'</b><br>'+esc(s.sym)+'<br>DTC: '+esc((s.dtc||[]).join(','))+'<br>'+esc(s.fix)+'<br>Src: '+esc(s.src)+'</div>';window.print();};
 $('#btnShare').onclick=function(){if(navigator.share)navigator.share({title:'Mon Aide Technique',url:location.href});};
-var gchips=['ALL','FR','EU','AS','US'];
-$('#groupChips').innerHTML=gchips.map(function(g){return '<div class="chip'+(g==='ALL'?' active':'')+'" data-g="'+g+'">'+g+'</div>';}).join('');
+$('#groupChips').innerHTML=['ALL','FR','EU','AS','US'].map(function(g){return '<div class="chip'+(g==='ALL'?' active':'')+'" data-g="'+g+'">'+g+'</div>';}).join('');
 $('#groupChips').onclick=function(e){var c=e.target.closest('[data-g]');if(!c)return;state.group=c.dataset.g;document.querySelectorAll('#groupChips .chip').forEach(function(x){x.classList.remove('active');});c.classList.add('active');renderBrands();};
 $('#brandSearch').addEventListener('input',function(){state.q=this.value.toLowerCase();renderBrands();});
-/* ===== INIT ===== */
+$('#catChips').innerHTML=CATS.map(function(k){return '<div class="chip'+(k==='Tous'?' active':'')+'" data-c="'+k+'">'+k+'</div>';}).join('');
+$('#catChips').onclick=function(e){var c=e.target.closest('[data-c]');if(!c)return;state.cat=c.dataset.c;document.querySelectorAll('#catChips .chip').forEach(function(x){x.classList.remove('active');});c.classList.add('active');renderSheets();};
+/* INIT */
 (async function(){
- await idb();await seed();
- renderBrands();refreshStats();ensureLock();
+ await idb();await seed();renderBrands();refreshStats();ensureLock();
  if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js').catch(function(){});
- var last=parseInt(localStorage.getItem('lastUpdate')||'0');
- if(Date.now()-last>WEEK)toast('🔄 MàJ hebdo disponible (bouton 🔄)');
- window.addEventListener('online',function(){$('#netBadge').textContent='En ligne';$('#netBadge').className='badge on';});
- window.addEventListener('offline',function(){$('#netBadge').textContent='Hors ligne';$('#netBadge').className='badge off';});
- $('#netBadge').textContent=navigator.onLine?'En ligne':'Hors ligne';
- $('#netBadge').className='badge '+(navigator.onLine?'on':'off');
+ if(Date.now()-parseInt(localStorage.getItem('lastUpdate')||'0')>WEEK)toast('🔄 MàJ hebdo dispo (🔄)');
+ function nb(){$('#netBadge').textContent=navigator.onLine?'En ligne':'Hors ligne';$('#netBadge').className='badge '+(navigator.onLine?'on':'off');}
+ nb();window.addEventListener('online',nb);window.addEventListener('offline',nb);
 })();
 </script>
 </body>
