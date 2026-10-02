@@ -1,0 +1,16 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Icônes</title></head>
+<body style="font-family:sans-serif;background:#0b1220;color:#fff;text-align:center;padding:30px">
+<h2>🏎️ Icônes véhicule sportif</h2><p>icon-512.png puis icon-192.png se téléchargent. Uploadez-les via <b>Upload files</b>.</p>
+<canvas id="c" width="512" height="512" style="width:150px;border-radius:28px"></canvas>
+<script>
+function draw(s){var c=document.getElementById('c');c.width=s;c.height=s;var x=c.getContext('2d'),u=s/512;
+var g=x.createLinearGradient(0,0,0,s);g.addColorStop(0,'#7c3aed');g.addColorStop(1,'#0b1220');x.fillStyle=g;var r=100*u;x.beginPath();x.moveTo(r,0);x.lineTo(s,0);x.arcTo(s,s,s-r,s,r);x.lineTo(0,s);x.arcTo(0,s,0,s-r,r);x.lineTo(0,0);x.arcTo(0,0,r,0,r);x.closePath();x.fill();
+x.fillStyle='#f43f5e';x.beginPath();x.moveTo(60*u,340*u);x.lineTo(140*u,340*u);x.arc(190*u,340*u,50*u,Math.PI,0);x.lineTo(320*u,290*u);x.lineTo(420*u,290*u);x.arc(430*u,340*u,50*u,Math.PI,0);x.lineTo(460*u,340*u);x.quadraticCurveTo(470*u,300*u,430*u,270*u);x.quadraticCurveTo(360*u,200*u,250*u,200*u);x.quadraticCurveTo(150*u,200*u,100*u,270*u);x.quadraticCurveTo(55*u,300*u,60*u,340*u);x.closePath();x.fill();
+x.fillStyle='#bfe3ff';x.beginPath();x.moveTo(180*u,265*u);x.quadraticCurveTo(240*u,215*u,320*u,215*u);x.lineTo(340*u,265*u);x.closePath();x.fill();
+x.fillStyle='#0a0f1c';x.beginPath();x.arc(190*u,340*u,38*u,0,7);x.fill();x.beginPath();x.arc(430*u,340*u,38*u,0,7);x.fill();
+x.fillStyle='#22355c';x.beginPath();x.arc(190*u,340*u,20*u,0,7);x.fill();x.beginPath();x.arc(430*u,340*u,20*u,0,7);x.fill();
+x.fillStyle='#ffe08a';x.fillRect(440*u,280*u,25*u,8*u);x.fillStyle='#fff';x.font='bold '+(60*u)+'px Arial';x.textAlign='center';x.fillText('MRT',256*u,440*u);
+return c.toDataURL('image/png');}
+function dl(s,n){var a=document.createElement('a');a.href=draw(s);a.download=n;a.click();}
+setTimeout(function(){dl(512,'icon-512.png');setTimeout(function(){dl(192,'icon-192.png');},600);},400);
+</script></body></html>
